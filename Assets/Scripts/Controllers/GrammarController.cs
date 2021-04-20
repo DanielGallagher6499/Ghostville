@@ -19,6 +19,8 @@ public class GrammarController : MonoBehaviour
     public Rigidbody2D rb;
     public float moveSpeed = 1.3f;
     float horizontalMove = 1f;
+    public float jumpPower = 1f;
+    public static bool isGrounded = false;
 
     public void Update()
     {
@@ -27,6 +29,15 @@ public class GrammarController : MonoBehaviour
         {
             case "forward":
                 Forward();
+                break;
+            case "stop":
+                Stop();
+                break;
+            case "jump":
+                if(isGrounded == true)
+                { 
+                    Jump();
+                }
                 break;
         }
     }
@@ -79,11 +90,29 @@ public class GrammarController : MonoBehaviour
 
     private void Forward()
     {
+        animator.SetBool("Jump", false);
         animator.SetFloat("Speed", horizontalMove * moveSpeed);
         Debug.Log("Run animator" + animator.name);
         float step = moveSpeed * Time.deltaTime;
 
         // move sprite towards the target location
         transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+    }
+
+    private void Stop()
+    {
+        animator.SetFloat("Speed", 0);
+        animator.SetBool("Jump", false);
+        //Stops the player
+        rb.velocity = Vector3.zero;
+    }
+
+    private void Jump()
+    {
+        animator.SetBool("Jump", true);
+        rb.AddForce(Vector2.up * jumpPower);
+        isGrounded = false;
+        //Out action is nullified
+        _outAction = null;
     }
 }

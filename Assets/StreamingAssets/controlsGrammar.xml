@@ -10,14 +10,23 @@ xmlns="http://www.w3.org/2001/06/grammar">
   <!--User Controls-->
   <rule id="controls">
     <one-of>
+      <!--Forward-->
       <item>
         <ruleref uri="#forward"/>
+      </item>
+      <!--Stop-->
+      <item>
+        <ruleref uri="#stop"/>
+      </item>
+      <!--Jump-->
+      <item>
+        <ruleref uri="#jump"/>
       </item>
     </one-of>
   </rule>
 
 
-  <!--Cases and phrases recognized-->
+  <!--Forward recognized phrases-->
   <rule id="forward">
     <tag>out.action = "forward";</tag>
     <one-of>
@@ -27,6 +36,26 @@ xmlns="http://www.w3.org/2001/06/grammar">
       <item>Go straight</item>
       <item>I want to go forward</item>
       <item>Straight ahead</item>
+    </one-of>
+  </rule>
+  <!--Stop recognized phrases-->
+  <rule id="stop">
+    <tag>out.action = "stop";</tag>
+    <one-of>
+      <item>Stop moving</item>
+      <item>Stop</item>
+      <item>Freeze</item>
+      <item>Halt</item>
+    </one-of>
+  </rule>
+  <!--Jump recognized phrases-->
+  <rule id="jump">
+    <tag>out.action = "jump";</tag>
+    <one-of>
+      <item>Jump up</item>
+      <item>Jump</item>
+      <item>Leap up</item>
+      <item>Hop up</item>
     </one-of>
   </rule>
 </grammar>

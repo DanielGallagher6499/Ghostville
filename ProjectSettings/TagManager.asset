@@ -7,6 +7,10 @@ TagManager:
   - Ground
   - Flag
   - Boundary
+  - Coins
+  - GoldCoin
+  - SilverCoin
+  - Spike
   layers:
   - Default
   - TransparentFX
