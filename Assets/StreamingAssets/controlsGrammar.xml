@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<grammar xml:lang="en" root="controls"
+tag-format="semantics/1.0" version="1.0"
+xmlns="http://www.w3.org/2001/06/grammar">
+  <!--Daniel Gallagher - G00360986-->
+  <!--Ghostville-->
+
+
+  <!--User Controls-->
+  <rule id="controls">
+    <one-of>
+      <item>
+        <ruleref uri="#forward"/>
+      </item>
+    </one-of>
+  </rule>
+
+
+  <!--Cases and phrases recognized-->
+  <rule id="forward">
+    <tag>out.action = "forward";</tag>
+    <one-of>
+      <item>Go forward</item>
+      <item>Forward</item>
+      <item>Straight</item>
+      <item>Go straight</item>
+      <item>I want to go forward</item>
+      <item>Straight ahead</item>
+    </one-of>
+  </rule>
+</grammar>
