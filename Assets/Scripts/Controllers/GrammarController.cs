@@ -33,12 +33,6 @@ public class GrammarController : MonoBehaviour
             case "stop":
                 Stop();
                 break;
-            case "jump":
-                if(isGrounded == true)
-                { 
-                    Jump();
-                }
-                break;
         }
     }
 
@@ -74,6 +68,16 @@ public class GrammarController : MonoBehaviour
             string valueString = meaning.values[0].Trim();
             message.Append("Key: " + keyString + ", Value: " + valueString + " ");
             _outAction = valueString;
+
+            switch (_outAction)
+            {
+                case "jump":
+                    if (isGrounded == true)
+                    {
+                        Jump();
+                    }
+                    break;
+            }
         }
         // use a string builder to create the string and out put to the user
         Debug.Log(message);
@@ -92,6 +96,7 @@ public class GrammarController : MonoBehaviour
     {
         animator.SetBool("Jump", false);
         animator.SetFloat("Speed", horizontalMove * moveSpeed);
+        isGrounded = true;
         Debug.Log("Run animator" + animator.name);
         float step = moveSpeed * Time.deltaTime;
 
@@ -103,12 +108,14 @@ public class GrammarController : MonoBehaviour
     {
         animator.SetFloat("Speed", 0);
         animator.SetBool("Jump", false);
+        isGrounded = true;
         //Stops the player
         rb.velocity = Vector3.zero;
     }
 
     private void Jump()
     {
+        animator.SetFloat("Speed", 0);
         animator.SetBool("Jump", true);
         rb.AddForce(Vector2.up * jumpPower);
         isGrounded = false;

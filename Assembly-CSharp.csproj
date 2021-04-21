@@ -66,6 +66,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Controllers\GrammarController.cs" />
     <Compile Include="Assets\Scripts\Player\Grounded.cs" />
+    <Compile Include="Assets\Scripts\World\Spike.cs" />
     <Compile Include="Assets\Simple 2D Platformer BE2\ReadMe\Scripts\ReadmeBE2.cs" />
     <None Include="Assets\StreamingAssets\controlsGrammar.xml" />
     <Reference Include="UnityEngine">
