@@ -100,7 +100,6 @@ public class GrammarController : MonoBehaviour
         animator.SetBool("Jump", false);
         animator.SetFloat("Speed", horizontalMove * moveSpeed);
         isGrounded = true;
-        Debug.Log("Run animator" + animator.name);
         float step = moveSpeed * Time.deltaTime;
 
         // move sprite towards the target location
@@ -132,7 +131,6 @@ public class GrammarController : MonoBehaviour
         animator.SetBool("Jump", false);
         animator.SetFloat("Speed", horizontalMove * moveSpeed);
         isGrounded = true;
-        Debug.Log("Run animator" + animator.name);
 
         //Moves player backwards
         float step = moveSpeed * Time.deltaTime;
