@@ -22,6 +22,10 @@ xmlns="http://www.w3.org/2001/06/grammar">
       <item>
         <ruleref uri="#jump"/>
       </item>
+      <!--One Step Forward-->
+      <item>
+        <ruleref uri="#backwards"/>
+      </item>
     </one-of>
   </rule>
 
@@ -56,6 +60,16 @@ xmlns="http://www.w3.org/2001/06/grammar">
       <item>Jump</item>
       <item>Leap up</item>
       <item>Hop up</item>
+    </one-of>
+  </rule>
+  <!--One Step Forward-->
+  <rule id="backwards">
+    <tag>out.action = "backwards";</tag>
+    <one-of>
+      <item>Go back</item>
+      <item>Move backwards</item>
+      <item>Reverse</item>
+      <item>Go backwards</item>
     </one-of>
   </rule>
 </grammar>

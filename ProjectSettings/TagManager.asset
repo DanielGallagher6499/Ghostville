@@ -11,6 +11,8 @@ TagManager:
   - GoldCoin
   - SilverCoin
   - Spike
+  - Frontpoint
+  - Endpoint
   layers:
   - Default
   - TransparentFX

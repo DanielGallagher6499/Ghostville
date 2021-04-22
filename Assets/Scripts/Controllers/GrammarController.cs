@@ -30,6 +30,9 @@ public class GrammarController : MonoBehaviour
             case "forward":
                 Forward();
                 break;
+            case "backwards":
+                Backwards();
+                break;
             case "stop":
                 Stop();
                 break;
@@ -101,7 +104,8 @@ public class GrammarController : MonoBehaviour
         float step = moveSpeed * Time.deltaTime;
 
         // move sprite towards the target location
-        transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+        //transform.position += Vector3.right * moveSpeed * Time.deltaTime;
+        transform.position = Vector2.MoveTowards(transform.position, GameObject.FindGameObjectWithTag("Frontpoint").transform.position, step * 1);
     }
 
     private void Stop()
@@ -121,5 +125,18 @@ public class GrammarController : MonoBehaviour
         isGrounded = false;
         //Out action is nullified
         _outAction = null;
+    }
+
+    private void Backwards()
+    {
+        animator.SetBool("Jump", false);
+        animator.SetFloat("Speed", horizontalMove * moveSpeed);
+        isGrounded = true;
+        Debug.Log("Run animator" + animator.name);
+
+        //Moves player backwards
+        float step = moveSpeed * Time.deltaTime;
+        // move sprite towards the target location
+        transform.position = Vector2.MoveTowards(transform.position, GameObject.FindGameObjectWithTag("Endpoint").transform.position, step * 1);
     }
 }
