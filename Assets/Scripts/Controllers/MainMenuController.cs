@@ -10,17 +10,19 @@ using UnityEngine.Windows.Speech;
 //Daniel Gallagher - G00360986
 //Ghostville
 
-public class MenuController : MonoBehaviour
+public class MainMenuController : MonoBehaviour
 {
     //Variables
     public GrammarRecognizer gr;
     private string _outAction;
+    public GameObject StartScreen;
+    public GameObject ControlsScreen;
 
 
     public void Update()
     {
         //Update switch for forward and backward movement also including stop
-        switch (_outAction)
+        /*switch (_outAction)
         {
             case "play":
                 Play();
@@ -28,13 +30,16 @@ public class MenuController : MonoBehaviour
             case "quit":
                 Quit();
                 break;
-        }
+            case "controls":
+                Controls();
+                break;
+        }*/
     }
 
     // Start is called before the first frame update
     void Start()
     {
-        gr = new GrammarRecognizer(Path.Combine(Application.streamingAssetsPath, "menuGrammar.xml"), ConfidenceLevel.Low);
+        gr = new GrammarRecognizer(Path.Combine(Application.streamingAssetsPath, "mainMenuGrammar.xml"), ConfidenceLevel.Low);
         gr.OnPhraseRecognized += GR_OnPhraseRecognized;
         gr.Start();
         Debug.Log("Grammar loaded and recogniser started!");
@@ -59,6 +64,22 @@ public class MenuController : MonoBehaviour
             string valueString = meaning.values[0].Trim();
             message.Append("Key: " + keyString + ", Value: " + valueString + " ");
             _outAction = valueString;
+
+            switch (_outAction)
+            {
+                case "play":
+                    Play();
+                    break;
+                case "quit":
+                    Quit();
+                    break;
+                case "controls":
+                    Controls();
+                    break;
+                case "back":
+                    Back();
+                    break;
+            }
         }
         // use a string builder to create the string and out put to the user
         Debug.Log(message);
@@ -82,5 +103,17 @@ public class MenuController : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("Game Closed!");
+    }
+
+    private void Controls()
+    {
+        StartScreen.SetActive(false);
+        ControlsScreen.SetActive(true);
+    }
+
+    private void Back()
+    {
+        StartScreen.SetActive(true);
+        ControlsScreen.SetActive(false);
     }
 }

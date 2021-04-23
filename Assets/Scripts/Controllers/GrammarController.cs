@@ -33,9 +33,6 @@ public class GrammarController : MonoBehaviour
             case "backwards":
                 Backwards();
                 break;
-            case "stop":
-                Stop();
-                break;
         }
     }
 
@@ -79,6 +76,9 @@ public class GrammarController : MonoBehaviour
                     {
                         Jump();
                     }
+                    break;
+                case "stop":
+                    Stop();
                     break;
             }
         }

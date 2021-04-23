@@ -1170,6 +1170,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de30429beedb96f4994502b0c3a81720, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  StartScreen: {fileID: 1082745684}
+  ControlsScreen: {fileID: 348142094}
 --- !u!4 &470668600
 Transform:
   m_ObjectHideFlags: 0

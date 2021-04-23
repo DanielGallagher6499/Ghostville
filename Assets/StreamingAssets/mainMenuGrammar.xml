@@ -18,6 +18,14 @@ xmlns="http://www.w3.org/2001/06/grammar">
       <item>
         <ruleref uri="#quit"/>
       </item>
+      <!--Control-->
+      <item>
+        <ruleref uri="#controls"/>
+      </item>
+      <!--Back-->
+      <item>
+        <ruleref uri="#back"/>
+      </item>
     </one-of>
   </rule>
 
@@ -56,6 +64,34 @@ xmlns="http://www.w3.org/2001/06/grammar">
 
       <item> Close game </item>
       <item> Close the game </item>
+    </one-of>
+  </rule>
+  <!--Controls recognized phrases-->
+  <rule id="controls">
+    <tag>out.action = "controls";</tag>
+    <one-of>
+      <item> Load controls </item>
+      <item> Load the controls </item>
+
+      <item> Show controls </item>
+      <item> Show the controls </item>
+
+      <item> How do I play </item>
+      <item> How to play </item>
+    </one-of>
+  </rule>
+  <!--Back recognized phrases-->
+  <rule id="back">
+    <tag>out.action = "back";</tag>
+    <one-of>
+      <item> Go back </item>
+      <item> Go back to homescreen </item>
+
+      <item> Go to main menu </item>
+      <item> Main menu </item>
+
+      <item> Homescreen </item>
+      <item> Leave controls</item>
     </one-of>
   </rule>
 </grammar>
