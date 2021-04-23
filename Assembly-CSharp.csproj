@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Controllers\MainMenuController.cs" />
     <Compile Include="Assets\Scripts\Controllers\PauseMenuController.cs" />
     <Compile Include="Assets\Scripts\Controllers\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Controllers\WinMenu.cs" />
     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
     <Compile Include="Assets\Scripts\Menu\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Player\Grounded.cs" />
