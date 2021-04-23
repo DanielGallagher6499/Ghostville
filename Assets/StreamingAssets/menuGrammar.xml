@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<grammar xml:lang="en" root="menu"
+tag-format="semantics/1.0" version="1.0"
+xmlns="http://www.w3.org/2001/06/grammar">
+  <!--Daniel Gallagher - G00360986-->
+  <!--Ghostville-->
+
+
+  <!--Menu Controls-->
+  <rule id="menu">
+    <one-of>
+      <!--Play-->
+      <item>
+        <ruleref uri="#play"/>
+      </item>
+      <!--Play-->
+      <item>
+        <ruleref uri="#quit"/>
+      </item>
+    </one-of>
+  </rule>
+
+
+  <!--Play recognized phrases-->
+  <rule id="play">
+    <tag>out.action = "play";</tag>
+    <one-of>
+      <item>Start the game</item>
+      <item>Start game</item>
+      <item>Start</item>
+      
+      <item>Play the game</item>
+      <item>Play game</item>
+
+      <item>Begin game</item>
+      <item>Begin the game</item>
+      
+      <item>Start my quest</item>
+      <item>Let's get going</item>
+      <item>Let's go</item>
+    </one-of>
+  </rule>
+  <!--Quit recognized phrases-->
+  <rule id="quit">
+    <tag>out.action = "quit";</tag>
+    <one-of>
+      <item> Exit the game </item>
+      <item> Exit game </item>
+
+      <item> Quit the game </item>
+      <item> Quit game </item>
+
+      <item> End game </item>
+      <item> End the game </item>
+
+      <item> Close game </item>
+      <item> Close the game </item>
+    </one-of>
+  </rule>
+</grammar>
