@@ -20,6 +20,10 @@ alt="GMIT Logo" width="500" height="200"/>
 | **Module Lecturer**      | Damien Costello |
 
 ***
+##Files of interest
+Screencast.mp4 - Contains my screencast of the game which is also located at https://www.youtube.com/watch?v=WgWD_9tDDS4&ab_channel=DanielG
+Testing.xlsx - Contains my testing of the game.
+Documentation.pdf - Contains my write up for the game.
 
 ## Overview
 This is a cool retro feeling game which includes both control input from the user's device but also allows for voice commands in the game. The voice control aspect of the game
