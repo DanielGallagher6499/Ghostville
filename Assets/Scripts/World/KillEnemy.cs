@@ -8,6 +8,7 @@ public class KillEnemy : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
+            //Kill enemy
             Destroy(collision.gameObject);
         }
     }

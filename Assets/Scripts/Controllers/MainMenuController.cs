@@ -21,19 +21,7 @@ public class MainMenuController : MonoBehaviour
 
     public void Update()
     {
-        //Update switch for forward and backward movement also including stop
-        /*switch (_outAction)
-        {
-            case "play":
-                Play();
-                break;
-            case "quit":
-                Quit();
-                break;
-            case "controls":
-                Controls();
-                break;
-        }*/
+
     }
 
     // Start is called before the first frame update

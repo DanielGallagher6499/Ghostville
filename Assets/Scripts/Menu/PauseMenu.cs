@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenuUI;
     void Update()
     {
+        //If esc is pressed pause 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (GameIsPaused)
@@ -22,6 +23,7 @@ public class PauseMenu : MonoBehaviour
     }
     public void Resume()
     {
+        //Resume game
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -29,6 +31,7 @@ public class PauseMenu : MonoBehaviour
 
     void Pause()
     {
+        //Pause game
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -36,6 +39,7 @@ public class PauseMenu : MonoBehaviour
 
     public void LoadMenu()
     {
+        //Load menu
         Debug.Log("Loading....");
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
@@ -43,6 +47,7 @@ public class PauseMenu : MonoBehaviour
 
     public void QuitGame()
     {
+        //Quit
         Debug.Log("Quitting Game....");
         Application.Quit();
 
