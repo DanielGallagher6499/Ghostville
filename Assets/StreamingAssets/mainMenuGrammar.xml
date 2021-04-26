@@ -91,7 +91,10 @@ xmlns="http://www.w3.org/2001/06/grammar">
       <item> Main menu </item>
 
       <item> Homescreen </item>
-      <item> Leave controls</item>
+      <item> Leave controls menu</item>
+
+      <item> Last screen </item>
+      <item> Go to last screen</item>
     </one-of>
   </rule>
 </grammar>

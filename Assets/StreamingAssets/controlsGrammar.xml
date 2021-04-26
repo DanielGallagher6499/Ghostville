@@ -40,6 +40,10 @@ xmlns="http://www.w3.org/2001/06/grammar">
       <item>Go straight</item>
       <item>I want to go forward</item>
       <item>Straight ahead</item>
+      <item>Move forward</item>
+      <item>Move ghost forward</item>
+      <item>Walk forward</item>
+      <item>Run forward</item>
     </one-of>
   </rule>
   <!--Stop recognized phrases-->
@@ -50,6 +54,10 @@ xmlns="http://www.w3.org/2001/06/grammar">
       <item>Stop</item>
       <item>Freeze</item>
       <item>Halt</item>
+      <item>Make ghost idle</item>
+      <item>Idle</item>
+      <item>Stay still</item>
+      <item>Still</item>
     </one-of>
   </rule>
   <!--Jump recognized phrases-->
@@ -60,16 +68,25 @@ xmlns="http://www.w3.org/2001/06/grammar">
       <item>Jump</item>
       <item>Leap up</item>
       <item>Hop up</item>
+      <item>Up up</item>
+      <item>Spring up</item>
+      <item>Bounce up</item>
     </one-of>
   </rule>
   <!--One Step Forward-->
   <rule id="backwards">
     <tag>out.action = "backwards";</tag>
     <one-of>
-      <item>Go back</item>
-      <item>Move backwards</item>
-      <item>Reverse</item>
       <item>Go backwards</item>
+      <item>Backwards</item>
+      <item>Back</item>
+      <item>Go back</item>
+      <item>I want to go backwards</item>
+      <item>Straight backwards</item>
+      <item>Move backwards</item>
+      <item>Move ghost backwards</item>
+      <item>Walk backwards</item>
+      <item>Run backwards</item>
     </one-of>
   </rule>
 </grammar>
