@@ -20,7 +20,8 @@ alt="GMIT Logo" width="500" height="200"/>
 | **Module Lecturer**      | Damien Costello |
 
 ***
-##Files of interest
+
+## Files of interest
 Screencast.mp4 - Contains my screencast of the game which is also located at https://www.youtube.com/watch?v=WgWD_9tDDS4&ab_channel=DanielG
 Testing.xlsx - Contains my testing of the game.
 Documentation.pdf - Contains my write up for the game.
